@@ -5,8 +5,11 @@ const PAGES_ROUTES: Routes = [
     {
         path: '',
         redirectTo: 'home',
-        component: HomeComponent,
-        pathMatch: 'full'
+        pathMatch: 'full',
+    },
+    {
+        path: 'home',
+        component: HomeComponent
     }
 ];
 

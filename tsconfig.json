@@ -1,7 +1,8 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": true,
+  "compileOnSave": false,
   "compilerOptions": {
+    "typeRoots": ["node_modules/primeng", "node_modules/@types"],
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -23,8 +24,7 @@
       "ES2022",
       "dom"
     ],
-    "typeRoots": ["node_modules/@types", "node_modules/primeng"],
-    "types": ["node"]
+    "types": ["node", "jest"],
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

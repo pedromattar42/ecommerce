@@ -1,1 +1,14 @@
-<p>header works!</p>
+<header class="header">
+  <div class="logo">LOGO</div>
+  <div class="search-box">
+    <i class="pi pi-search"></i>
+    <input type="text" pInputText placeholder="Pesquisar..." />
+  </div>
+  <div class="actions" class="flex flex-row flex-wrap">
+    <div class="flex flex-row flex-wrap mr-3" style="gap: 1rem;">
+      <i class="pi pi-user mt-3"></i>
+      <p>Login</p>
+    </div>
+    <p-button [rounded]="true" icon="pi pi-moon"></p-button>
+  </div>
+</header>
