@@ -39,11 +39,10 @@
   <div class="grid">
     @for (item of smartPhones; track $index) {
       <div class="col-12 md:col-3">
-        <p-card [header]="item.name" subheader="Card Subheader" [style]="{ width: '360px' }">
+        <p-card [header]="item.name + ' (' + item.ram + ' | ' + item.rom + ')'" subheader="Card Subheader" [style]="{ width: '360px' }" class="custom-card">
           <ng-template pTemplate="header">
             <img alt="Card" src="{{ item.path }}" />
           </ng-template>
-          <p></p>
           <div class="discount-marker">{{item.discount}}% OFF</div>
         </p-card>
       </div>

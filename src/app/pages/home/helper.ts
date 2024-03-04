@@ -43,21 +43,33 @@ export const SMARTPHONES_DATA = [
   {
     name: 'Galaxy A05',
     path: 'assets/images/smartphones/galaxy-a05.webp',
-    discount: 10
+    discount: 10,
+    price: 1200,
+    rom: "64GB",
+    ram: "4GB"
   },
   {
     name: 'Smart 6',
     path: 'assets/images/smartphones/smart-6.png',
-    discount: 5
+    discount: 5,
+    price: 1300,
+    rom: "128GB",
+    ram: "8GB"
   },
   {
     name: 'Galaxy A03',
     path: 'assets/images/smartphones/galaxy-ao3.png',
-    discount: 40
+    discount: 40,
+    price: 1500,
+    rom: "64GB",
+    ram: "4GB"
   },
   {
     name: 'Infinix',
     path: 'assets/images/smartphones/infinix.png',
-    discount: 50
+    discount: 50,
+    price: 1100,
+    rom: "64GB",
+    ram: "4GB"
   },
 ]

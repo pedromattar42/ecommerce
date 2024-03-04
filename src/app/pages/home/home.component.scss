@@ -24,18 +24,17 @@
   padding-top: 5rem;
 }
 
-
 .discount-marker {
-  position: absolute; /* Posicionamento absoluto para colocá-lo sobre o card */
-  top: 0; /* Alinha ao topo do card */
-  right: 0; /* Alinha à direita do card */
-  background-color: blue; /* Define a cor de fundo para azul */
-  color: white; /* Cor do texto */
-  padding: 5px 10px; /* Adiciona um pouco de padding */
-  border-bottom-left-radius: 8px; /* Arredonda o canto inferior esquerdo */
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #1ABCFE;
+  color: white;
+  padding: 5px 10px;
+  border-bottom-left-radius: 8px;
 }
 
-/* Garante que o card tenha posição relativa */
 p-card {
-  position: relative; /* Necessário para o posicionamento absoluto do marcador de desconto funcionar corretamente */
+  position: relative;
 }
+
