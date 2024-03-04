@@ -1,25 +1,52 @@
 <app-header></app-header>
 <div class="container">
   <div class="card">
-    <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
-        <ng-template let-product pTemplate="item">
-            <div class="product-item">
-                <div class="product-item-content">
-                    <div class="mb-3">
-                        <img src="{{ product.path }}" [alt]="product.name" class="product-image" />
-                    </div>
-                </div>
+    <p-carousel
+      [value]="products"
+      [numVisible]="3"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template let-product pTemplate="item">
+        <div class="product-item">
+          <div class="product-item-content">
+            <div class="mb-3">
+              <img
+                src="{{ product.path }}"
+                [alt]="product.name"
+                class="product-image"
+              />
             </div>
-        </ng-template>
+          </div>
+        </div>
+      </ng-template>
     </p-carousel>
   </div>
 
-  <div class="flex flex-column">
-    <div class="flex justify-content-between flex-wrap">
-      <p>Encontre aqui os melhores smartphones</p>
+  <div class="flex flex-column mt-6">
+    <div class="flex flex-row justify-content-between flex-wrap">
+      <div class="flex flex-row align-items-center">
+        <p class="text-4xl pr-2 m-0">Encontre aqui os melhores</p>
+        <p class="text-4xl font-bold m-0">smartphones</p>
+      </div>
+      <div class="cursor-pointer align-self-center">
+        Ver todos <i class="pi pi-angle-right"></i>
+      </div>
     </div>
-    <div>
-      Ver todos <i class="pi pi-angle-right"></i>
-    </div>
+    <p-divider class="p-0 m-0"></p-divider>
+  </div>
+
+  <div class="grid">
+    @for (item of smartPhones; track $index) {
+      <div class="col-12 md:col-3">
+        <p-card [header]="item.name" subheader="Card Subheader" [style]="{ width: '360px' }">
+          <ng-template pTemplate="header">
+            <img alt="Card" src="{{ item.path }}" />
+          </ng-template>
+          <p></p>
+          <div class="discount-marker">{{item.discount}}% OFF</div>
+        </p-card>
+      </div>
+    }
   </div>
 </div>

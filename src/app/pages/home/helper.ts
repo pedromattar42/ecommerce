@@ -38,3 +38,26 @@ export const RESPONSIVE_OPTIONS = [
     numScroll: 1,
   },
 ];
+
+export const SMARTPHONES_DATA = [
+  {
+    name: 'Galaxy A05',
+    path: 'assets/images/smartphones/galaxy-a05.webp',
+    discount: 10
+  },
+  {
+    name: 'Smart 6',
+    path: 'assets/images/smartphones/smart-6.png',
+    discount: 5
+  },
+  {
+    name: 'Galaxy A03',
+    path: 'assets/images/smartphones/galaxy-ao3.png',
+    discount: 40
+  },
+  {
+    name: 'Infinix',
+    path: 'assets/images/smartphones/infinix.png',
+    discount: 50
+  },
+]
