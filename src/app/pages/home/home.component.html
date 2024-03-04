@@ -1,1 +1,25 @@
 <app-header></app-header>
+<div class="container">
+  <div class="card">
+    <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item">
+            <div class="product-item">
+                <div class="product-item-content">
+                    <div class="mb-3">
+                        <img src="{{ product.path }}" [alt]="product.name" class="product-image" />
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+  </div>
+
+  <div class="flex flex-column">
+    <div class="flex justify-content-between flex-wrap">
+      <p>Encontre aqui os melhores smartphones</p>
+    </div>
+    <div>
+      Ver todos <i class="pi pi-angle-right"></i>
+    </div>
+  </div>
+</div>
