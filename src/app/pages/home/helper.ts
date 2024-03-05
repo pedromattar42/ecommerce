@@ -45,6 +45,7 @@ export const SMARTPHONES_DATA = [
     path: 'assets/images/smartphones/galaxy-a05.webp',
     discount: 10,
     price: 1200,
+    previousPrice: 2100,
     rom: "64GB",
     ram: "4GB"
   },
@@ -53,6 +54,7 @@ export const SMARTPHONES_DATA = [
     path: 'assets/images/smartphones/smart-6.png',
     discount: 5,
     price: 1300,
+    previousPrice: 2000,
     rom: "128GB",
     ram: "8GB"
   },
@@ -61,6 +63,7 @@ export const SMARTPHONES_DATA = [
     path: 'assets/images/smartphones/galaxy-ao3.png',
     discount: 40,
     price: 1500,
+    previousPrice: 2000,
     rom: "64GB",
     ram: "4GB"
   },
@@ -69,6 +72,7 @@ export const SMARTPHONES_DATA = [
     path: 'assets/images/smartphones/infinix.png',
     discount: 50,
     price: 1100,
+    previousPrice: 1900,
     rom: "64GB",
     ram: "4GB"
   },

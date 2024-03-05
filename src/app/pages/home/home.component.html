@@ -25,9 +25,10 @@
 
   <div class="flex flex-column mt-6">
     <div class="flex flex-row justify-content-between flex-wrap">
-      <div class="flex flex-row align-items-center">
-        <p class="text-4xl pr-2 m-0">Encontre aqui os melhores</p>
-        <p class="text-4xl font-bold m-0">smartphones</p>
+      <div>
+        <p class="text-4xl pr-2 m-0">
+          Encontre aqui os melhores <strong>smartphones</strong>
+        </p>
       </div>
       <div class="cursor-pointer align-self-center">
         Ver todos <i class="pi pi-angle-right"></i>
@@ -38,14 +39,65 @@
 
   <div class="grid">
     @for (item of smartPhones; track $index) {
-      <div class="col-12 md:col-3">
-        <p-card [header]="item.name + ' (' + item.ram + ' | ' + item.rom + ')'" subheader="Card Subheader" [style]="{ width: '360px' }" class="custom-card">
-          <ng-template pTemplate="header">
-            <img alt="Card" src="{{ item.path }}" />
-          </ng-template>
-          <div class="discount-marker">{{item.discount}}% OFF</div>
-        </p-card>
-      </div>
+    <div class="col-12 md:col-3">
+      <p-card
+        styleClass="card-style"
+        [header]="item.name + ' (' + item.ram + ' | ' + item.rom + ')'"
+        [style]="{ width: '360px' }"
+      >
+        <ng-template pTemplate="header">
+          <img alt="Card" src="{{ item.path }}" />
+        </ng-template>
+        <div class="flex flex-row gap-4">
+          <p>{{item.price | currency: 'BRL'}}</p>
+          <p class="line-through">{{item.previousPrice | currency: 'BRL'}}</p>
+        </div>
+        <p-divider class="custom-divider"></p-divider>
+        <p class="buy-now font-bold">Comprar - {{item.price | currency: 'BRL'}}</p>
+        <div class="discount-marker">{{ item.discount }}% OFF</div>
+      </p-card>
+    </div>
     }
   </div>
+
+  <div class="flex flex-column mt-6">
+    <div class="flex flex-row justify-content-between flex-wrap">
+      <div>
+        <p class="text-4xl pr-2 m-0">
+          Navegue pelas principais <strong class="text-blue">categorias</strong>
+        </p>
+      </div>
+      <div class="cursor-pointer align-self-center">
+        Ver todas <i class="pi pi-angle-right"></i>
+      </div>
+    </div>
+    <p-divider class="p-0 m-0"></p-divider>
+  </div>
+
+
+  <div class="grid">
+    <p-card styleClass="circle-card">
+      @for (item of smartPhones; track $index) {
+        <div class="col-12 md:col-3">
+          <p-card
+            styleClass="rounded-card-style"
+            [header]="item.name + ' (' + item.ram + ' | ' + item.rom + ')'"
+            [style]="{ width: '360px' }"
+          >
+            <ng-template pTemplate="header">
+              <img alt="Card" src="{{ item.path }}" />
+            </ng-template>
+            <div class="flex flex-row gap-4">
+              <p>{{item.price | currency: 'BRL'}}</p>
+              <p class="line-through">{{item.previousPrice | currency: 'BRL'}}</p>
+            </div>
+            <p-divider class="custom-divider"></p-divider>
+            <p class="buy-now font-bold">Comprar - {{item.price | currency: 'BRL'}}</p>
+            <div class="discount-marker">{{ item.discount }}% OFF</div>
+          </p-card>
+        </div>
+        }
+    </p-card>
+  </div>
+
 </div>

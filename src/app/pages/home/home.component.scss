@@ -1,17 +1,49 @@
 :host ::ng-deep {
   .product-item {
-      .product-item-content {
-          border: 1px solid var(--surface-d);
-          border-radius: 3px;
-          margin: .3rem;
-          text-align: center;
-          padding: 2rem 0;
-      }
+    .product-item-content {
+      border: 1px solid var(--surface-d);
+      border-radius: 3px;
+      margin: 0.3rem;
+      text-align: center;
+      padding: 2rem 0;
+    }
 
-      .product-image {
-          width: 50%;
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-      }
+    .product-image {
+      width: 50%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+  }
+
+  .card-style.p-card {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+    overflow: hidden;
+  }
+
+  .card-style.p-card p {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .card-style.p-card.p-component {
+    position: relative;
+  }
+
+  .card-style.p-card:hover {
+    border-color: #1abcfe;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .rounded-card-style.p-card {
+    border-radius: 50% !important; /* Torna as bordas completamente arredondadas */
+    width: 200px; /* Define a largura do círculo */
+    height: 200px; /* Define a altura do círculo */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas arredondadas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centraliza o texto e o conteúdo */
   }
 }
 
@@ -28,13 +60,18 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #1ABCFE;
+  background-color: #1abcfe;
   color: white;
   padding: 5px 10px;
   border-bottom-left-radius: 8px;
+  margin: 0;
+  overflow: hidden;
 }
 
-p-card {
-  position: relative;
+.text-blue {
+  color: #1abcfe;
 }
 
+.buy-now {
+  color: #0acf83;
+}

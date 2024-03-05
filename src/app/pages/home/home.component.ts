@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HeaderComponent } from '../../shared/components/organism/header/header.component';
 import { CarouselModule } from 'primeng/carousel';
 import { PRODUCTS_DATA, RESPONSIVE_OPTIONS, SMARTPHONES_DATA } from './helper';
