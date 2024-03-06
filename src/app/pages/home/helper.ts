@@ -77,3 +77,34 @@ export const SMARTPHONES_DATA = [
     ram: "4GB"
   },
 ]
+
+export const CATEGORIES_DATA = [
+  {
+    name: "Cosméticos",
+    path: 'assets/images/categories/cosmetico-base.png',
+  },
+  {
+    name: "Mobile",
+    path: 'assets/images/categories/infinix.png',
+  },
+  {
+    name: "Móveis",
+    path: 'assets/images/categories/sofa.png',
+  },
+  {
+    name: "Relógios",
+    path: 'assets/images/categories/relogio.webp',
+  },
+  {
+    name: "Acessórios",
+    path: 'assets/images/categories/colar.png',
+  },
+  {
+    name: "Eletrônicos",
+    path: 'assets/images/categories/tv.png',
+  },
+  {
+    name: "Decoração",
+    path: 'assets/images/categories/vaso-planta.png',
+  },
+]

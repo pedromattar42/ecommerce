@@ -49,11 +49,15 @@
           <img alt="Card" src="{{ item.path }}" />
         </ng-template>
         <div class="flex flex-row gap-4">
-          <p>{{item.price | currency: 'BRL'}}</p>
-          <p class="line-through">{{item.previousPrice | currency: 'BRL'}}</p>
+          <p>{{ item.price | currency : "BRL" }}</p>
+          <p class="line-through">
+            {{ item.previousPrice | currency : "BRL" }}
+          </p>
         </div>
         <p-divider class="custom-divider"></p-divider>
-        <p class="buy-now font-bold">Comprar - {{item.price | currency: 'BRL'}}</p>
+        <p class="buy-now font-bold">
+          Comprar - {{ item.price | currency : "BRL" }}
+        </p>
         <div class="discount-marker">{{ item.discount }}% OFF</div>
       </p-card>
     </div>
@@ -74,30 +78,19 @@
     <p-divider class="p-0 m-0"></p-divider>
   </div>
 
-
   <div class="grid">
-    <p-card styleClass="circle-card">
-      @for (item of smartPhones; track $index) {
+    @for (item of categories; track $index) {
+      <div class="flex flex-column">
         <div class="col-12 md:col-3">
-          <p-card
-            styleClass="rounded-card-style"
-            [header]="item.name + ' (' + item.ram + ' | ' + item.rom + ')'"
-            [style]="{ width: '360px' }"
-          >
+          <p-card styleClass="rounded-card-style">
             <ng-template pTemplate="header">
-              <img alt="Card" src="{{ item.path }}" />
+              <img alt="Card" src="{{ item.path }}" class="rounded-card-image"/>
             </ng-template>
-            <div class="flex flex-row gap-4">
-              <p>{{item.price | currency: 'BRL'}}</p>
-              <p class="line-through">{{item.previousPrice | currency: 'BRL'}}</p>
-            </div>
-            <p-divider class="custom-divider"></p-divider>
-            <p class="buy-now font-bold">Comprar - {{item.price | currency: 'BRL'}}</p>
-            <div class="discount-marker">{{ item.discount }}% OFF</div>
           </p-card>
         </div>
-        }
-    </p-card>
+        <p class="flex align-self-center">{{item.name}}</p>
+      </div>
+    }
   </div>
 
 </div>
