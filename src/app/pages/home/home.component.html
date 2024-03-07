@@ -34,12 +34,12 @@
         Ver todos <i class="pi pi-angle-right"></i>
       </div>
     </div>
-    <p-divider class="p-0 m-0"></p-divider>
+    <p-divider class="p-0 m-0" styleClass="custom-divider"></p-divider>
   </div>
 
-  <div class="grid">
+  <div class="grid justify-content-center mt-3 flex-wrap gap-3">
     @for (item of smartPhones; track $index) {
-    <div class="col-12 md:col-3">
+    <div>
       <p-card
         styleClass="card-style"
         [header]="item.name + ' (' + item.ram + ' | ' + item.rom + ')'"
@@ -80,17 +80,64 @@
 
   <div class="grid justify-content-center flex-wrap">
     @for (item of categories; track $index) {
-      <div class="flex flex-column">
-        <div class="col-12 md:col-3">
-          <p-card styleClass="rounded-card-style">
-            <ng-template pTemplate="header">
-              <img alt="Card" src="{{ item.path }}" class="rounded-card-image"/>
-            </ng-template>
-          </p-card>
-        </div>
-        <p class="flex align-self-center">{{item.name}}</p>
+    <div class="flex flex-column">
+      <div class="col-12 md:col-3">
+        <p-card styleClass="rounded-card-style">
+          <ng-template pTemplate="header">
+            <img alt="Card" src="{{ item.path }}" class="rounded-card-image" />
+          </ng-template>
+        </p-card>
       </div>
+      <p class="flex align-self-center">{{ item.name }}</p>
+    </div>
     }
   </div>
 
+  <div class="flex flex-column mt-6">
+    <div class="flex flex-row justify-content-between flex-wrap">
+      <div>
+        <p class="text-4xl pr-2 m-0">
+          Principais marcas <strong class="text-blue">eletrônicas</strong>
+        </p>
+      </div>
+      <div class="cursor-pointer align-self-center">
+        Ver todas <i class="pi pi-angle-right"></i>
+      </div>
+    </div>
+    <p-divider class="p-0 m-0" styleClass="custom-divider"></p-divider>
+  </div>
+
+  <div class="grid justify-content-center mt-3 flex-wrap gap-8">
+    @for (item of offersData; track $index) {
+    <img src="{{ item.path }}" />
+    }
+  </div>
+
+  <div class="flex flex-column mt-6">
+    <div class="flex flex-row justify-content-between flex-wrap">
+      <div>
+        <p class="text-4xl pr-2 m-0">
+          Itens <strong class="text-blue">essenciais diários</strong>
+        </p>
+      </div>
+      <div class="cursor-pointer align-self-center">
+        Ver todos <i class="pi pi-angle-right"></i>
+      </div>
+    </div>
+    <p-divider class="p-0 m-0" styleClass="custom-divider"></p-divider>
+  </div>
+
+  <div class="grid justify-content-center mt-3 flex-wrap gap-4">
+    @for (item of essentialsData; track $index) {
+    <div class="flex flex-column">
+      <p-card styleClass="essentials-card">
+        <ng-template pTemplate="header">
+          <img class="essentials-image" src="{{ item.path }}" />
+        </ng-template>
+      </p-card>
+      <p class="flex align-self-center">{{ item.name }}</p>
+      <p class="flex align-self-center font-bold m-0 p-0">{{ item.discountText }}</p>
+    </div>
+    }
+  </div>
 </div>

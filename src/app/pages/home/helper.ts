@@ -108,3 +108,48 @@ export const CATEGORIES_DATA = [
     path: 'assets/images/categories/vaso-planta.jpg',
   },
 ]
+
+export const OFFERS_DATA = [
+  {
+    path: 'assets/images/offers/oferta-iphone.png',
+  },
+  {
+    path: 'assets/images/offers/oferta-realme.png',
+  },
+  {
+    path: 'assets/images/offers/oferta-xiaomi.png',
+  },
+]
+
+export const ESSENTIALS_DATA = [
+  {
+    name: "Essenciais diários",
+    path: 'assets/images/essentials/caixa-frutas.png',
+    discountText: "Até 50% de desconto"
+  },
+  {
+    name: "Vegetais",
+    path: 'assets/images/essentials/vegetais.png',
+    discountText: "Até 50% de desconto"
+  },
+  {
+    name: "Frutas",
+    path: 'assets/images/essentials/frutas.png',
+    discountText: "Até 50% de desconto"
+  },
+  {
+    name: "Morangos",
+    path: 'assets/images/essentials/morangos.png',
+    discountText: "Até 50% de desconto"
+  },
+  {
+    name: "Manga",
+    path: 'assets/images/essentials/manga.png',
+    discountText: "Até 50% de desconto"
+  },
+  {
+    name: "Amora",
+    path: 'assets/images/essentials/amora.png',
+    discountText: "Até 50% de desconto"
+  },
+]

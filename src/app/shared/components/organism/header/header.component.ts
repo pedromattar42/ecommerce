@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   public selectedTheme: string = "light"
 
   ngOnInit(): void {
+
   }
 
   public toggleTheme() {

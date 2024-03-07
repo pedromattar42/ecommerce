@@ -38,6 +38,8 @@ export class ThemeService {
       if (savedTheme) {
         this.activeTheme = savedTheme;
         this.applyTheme(savedTheme);
+      } else {
+        this.setTheme("light")
       }
     }
   }
