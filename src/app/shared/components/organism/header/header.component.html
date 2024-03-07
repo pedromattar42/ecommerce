@@ -12,6 +12,6 @@
       <i class="pi pi-user mt-3"></i>
       <p>Login</p>
     </div>
-    <p-button [rounded]="true" icon="pi pi-moon"></p-button>
+    <p-button (onClick)="toggleTheme()" [rounded]="true" [icon]="selectedTheme === 'light' ? 'pi pi-moon' : 'pi pi-sun'"></p-button>
   </div>
 </header>

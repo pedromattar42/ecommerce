@@ -105,6 +105,6 @@ export const CATEGORIES_DATA = [
   },
   {
     name: "Decoração",
-    path: 'assets/images/categories/vaso-planta.png',
+    path: 'assets/images/categories/vaso-planta.jpg',
   },
 ]
