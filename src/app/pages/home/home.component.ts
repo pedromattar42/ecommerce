@@ -4,11 +4,12 @@ import { CarouselModule } from 'primeng/carousel';
 import { CATEGORIES_DATA, ESSENTIALS_DATA, OFFERS_DATA, PRODUCTS_DATA, RESPONSIVE_OPTIONS, SMARTPHONES_DATA } from './helper';
 import { DividerModule } from 'primeng/divider';
 import { CardModule } from 'primeng/card';
+import { FooterComponent } from '../../shared/components/organism/footer/footer.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, CarouselModule, DividerModule, CardModule],
+  imports: [HeaderComponent, CarouselModule, DividerModule, CardModule, FooterComponent],
   templateUrl: './home.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './home.component.scss',

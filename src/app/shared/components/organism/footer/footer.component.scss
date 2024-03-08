@@ -1,0 +1,28 @@
+a {
+  text-decoration: none;
+  color: var(--surface-50)
+}
+
+.container {
+  position: relative;
+  background-color: var(--blue-500);
+  color: var(--surface-50);
+}
+
+:host {
+  li {
+    margin-top: 1rem;
+  }
+}
+
+.footer-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-image {
+    max-width: 35%;
+  }
+}

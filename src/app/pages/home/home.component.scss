@@ -41,6 +41,20 @@
 
   .card-style.p-card.p-component .p-card-header {
     background-color: var(--surface-50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-style.p-card {
+    width: 25rem;
+    height: 30rem;
+  }
+
+  .smartphone-image {
+    max-width: 40%;
+    max-height: 40%;
+    object-fit: cover;
   }
 
   .rounded-card-style.p-card {
@@ -88,8 +102,6 @@
     object-fit: cover;
   }
 }
-
-
 
 .container {
   display: flex;

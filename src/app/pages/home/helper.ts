@@ -42,7 +42,7 @@ export const RESPONSIVE_OPTIONS = [
 export const SMARTPHONES_DATA = [
   {
     name: 'Galaxy A05',
-    path: 'assets/images/smartphones/galaxy-a05.webp',
+    path: 'assets/images/smartphones/galaxym13.png',
     discount: 10,
     price: 1200,
     previousPrice: 2100,
@@ -51,7 +51,7 @@ export const SMARTPHONES_DATA = [
   },
   {
     name: 'Smart 6',
-    path: 'assets/images/smartphones/smart-6.png',
+    path: 'assets/images/smartphones/galaxym33.png',
     discount: 5,
     price: 1300,
     previousPrice: 2000,
@@ -60,7 +60,7 @@ export const SMARTPHONES_DATA = [
   },
   {
     name: 'Galaxy A03',
-    path: 'assets/images/smartphones/galaxy-ao3.png',
+    path: 'assets/images/smartphones/galaxym53.png',
     discount: 40,
     price: 1500,
     previousPrice: 2000,
@@ -68,8 +68,8 @@ export const SMARTPHONES_DATA = [
     ram: "4GB"
   },
   {
-    name: 'Infinix',
-    path: 'assets/images/smartphones/infinix.png',
+    name: 'Galaxy S22 Ultra',
+    path: 'assets/images/smartphones/galaxys22ultra.png',
     discount: 50,
     price: 1100,
     previousPrice: 1900,
@@ -85,7 +85,7 @@ export const CATEGORIES_DATA = [
   },
   {
     name: "Mobile",
-    path: 'assets/images/categories/infinix.png',
+    path: 'assets/images/smartphones/galaxys22.png',
   },
   {
     name: "Móveis",
