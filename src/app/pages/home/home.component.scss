@@ -108,7 +108,10 @@
   justify-content: center;
   flex-direction: column;
   max-width: 80vw;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 10rem;
+  margin-left: auto;
   padding-top: 5rem;
 }
 
@@ -141,3 +144,4 @@
     #e0e0e0 50%
   );
 }
+
