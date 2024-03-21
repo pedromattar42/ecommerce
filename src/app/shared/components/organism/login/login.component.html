@@ -1,0 +1,26 @@
+<div
+  class="flex justify-content-center align-items-center flex-column"
+  [formGroup]="model"
+>
+  <div class="flex flex-column align-items-center p-3">
+    <div class="card">
+      <div class="flex flex-column align-items-center gap-2">
+        <app-input
+          label="Email"
+          formControlName="email"
+          class="w-full"
+        ></app-input>
+        <div class="flex flex-column gap-1 w-full">
+          <label for="password">Senha</label>
+          <p-password
+            formControlName="senha"
+            [feedback]="false"
+            [toggleMask]="true"
+            class="w-full"
+          ></p-password>
+        </div>
+        <app-button label="Confirmar"></app-button>
+      </div>
+    </div>
+  </div>
+</div>

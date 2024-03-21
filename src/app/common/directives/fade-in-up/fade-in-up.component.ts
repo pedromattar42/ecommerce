@@ -1,42 +1,38 @@
-import { AnimationBuilder, AnimationPlayer, animate, style } from '@angular/animations';
-import { isPlatformBrowser } from '@angular/common';
+import { AnimationBuilder, animate, style } from '@angular/animations';
 import {
-  AfterViewInit,
   Directive,
   ElementRef,
-  EventEmitter,
-  Inject,
-  Input,
   OnDestroy,
-  Output,
-  PLATFORM_ID,
-  inject,
+  afterNextRender,
 } from '@angular/core';
 
 @Directive({
-  selector: '[appFadeInUp]',
+  selector: '[fadeInUp]',
   standalone: true,
 })
-export class FadeInUpDirective implements AfterViewInit, OnDestroy {
-  private animationPlayer?: AnimationPlayer;
-  private intersectionObserver?: IntersectionObserver;
-  private builder = inject(AnimationBuilder)
+export class FadeInUpDirective implements OnDestroy {
+  private intersectionObserver?: IntersectionObserver | null = null;
+  private hasAnimated = false;
 
-  constructor(private el: ElementRef, @Inject(PLATFORM_ID) private platformId: Object) {}
-
-  ngAfterViewInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
+  constructor(
+    private el: ElementRef,
+    private builder: AnimationBuilder,
+  ) {
+    afterNextRender(() => {
+      this.intersectionObserver = new IntersectionObserver(() => {});
       const animation = this.builder.build([
         style({ opacity: 0, transform: 'translateY(100%)' }),
-        animate('0.5s ease-out', style({ opacity: 1, transform: 'translateY(0)' })),
+        animate('1s ease-out', style({ opacity: 1, transform: 'translateY(0)' })),
       ]);
 
       this.intersectionObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              this.animationPlayer = animation.create(this.el.nativeElement);
-              this.animationPlayer.play();
+            if (entry.isIntersecting && !this.hasAnimated) {
+              this.hasAnimated = true;
+              const player = animation.create(this.el.nativeElement);
+              player.play();
+              player.onDone(() => player.destroy());
             }
           });
         },
@@ -44,13 +40,10 @@ export class FadeInUpDirective implements AfterViewInit, OnDestroy {
       );
 
       this.intersectionObserver.observe(this.el.nativeElement);
-    }
+    });
   }
 
   ngOnDestroy(): void {
-    if (this.intersectionObserver) {
-      this.intersectionObserver.disconnect();
-    }
-    this.animationPlayer?.destroy();
+    this.intersectionObserver?.disconnect();
   }
 }

@@ -5,13 +5,26 @@
   </div>
   <div class="search-box p-input-icon-left">
     <i class="pi pi-search"></i>
-    <input class="search-input w-30rem" type="text" pInputText placeholder="Pesquisar..." />
+    <input
+      class="search-input w-30rem"
+      type="text"
+      pInputText
+      placeholder="Pesquisar..."
+    />
   </div>
   <div class="actions" class="flex flex-row flex-wrap">
-    <div class="flex flex-row flex-wrap mr-3" style="gap: 1rem;">
-      <i class="pi pi-user mt-3"></i>
-      <p>Login</p>
+    <div class="flex flex-row flex-wrap mr-3" style="gap: 0.5rem">
+      <i title="Login" class="pi pi-user mt-3"></i>
+      <p class="cursor-pointer" (click)="openLoginDialog()">Login</p>
+      <div class="vertical-divider mt-2"></div>
+      <i title="Carrinho" class="pi pi-shopping-cart mt-3"></i>
+      <p class="cursor-pointer">Carrinho</p>
     </div>
-    <p-button (onClick)="toggleTheme()" [rounded]="true" [icon]="selectedTheme === 'light' ? 'pi pi-moon' : 'pi pi-sun'"></p-button>
+
+    <p-button
+      (onClick)="toggleTheme()"
+      [rounded]="true"
+      [icon]="selectedTheme === 'light' ? 'pi pi-moon' : 'pi pi-sun'"
+    ></p-button>
   </div>
 </header>
